@@ -1,0 +1,71 @@
+void dma(int n)
+{
+
+    if (n > 0)
+    {
+        printf("Esquerda...\n");
+        dma(n - 1);
+    }
+}
+
+void trre(int n)
+{
+    while (n > 0)
+    {
+        printf("Direita...\n");
+        n--;
+    }
+    
+}
+void bspo(int n)
+{
+    do
+        {
+            printf("Direita...Cima\n");
+            n--;
+        } while (n > 0);
+
+        printf("Seu bispo se moveu cinco vezes para a diagonal direita para cima.");
+}
+int main()
+{
+
+    int peca, dama = 8, torre = 5, cav = 1, bispo = 5;
+
+    printf("Qual peça voce quer mover?\n Dama 1\n Torre 2\n Bispo 3\n Cavalo 4\n");
+    scanf("%i", &peca);
+    switch (peca)
+    {
+    case 1:
+        dma(dama);
+        printf("Sua dama se movimentou oito vezes para a esquerda.");
+        break;
+    case 2:
+        trre(torre);
+        printf("Sua torre se movimentou cinco vezes para a direita.");
+        break;
+    case 3:
+        bspo(bispo);
+        printf("Seu bispo se movimentou cinco vezes para a diagonal superior à direita.");
+        break;
+    case 4:
+        
+   for (int i = 0; i < 1; i++)
+   {
+    do
+    {
+        printf("Baixo...");
+        i++;
+    }while(i<2);
+
+    printf("Esquerda\n");
+   }
+   
+   printf("Seu cavalo se movimentou para a casa de baixo à esquerda\n");
+        break;
+    default:
+        printf("Numero de peça errado");
+        break;
+    }
+    return 0;
+}
